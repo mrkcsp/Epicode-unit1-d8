@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,600&family=Prata&family=Prosto+One&family=Unbounded&display=swap');
 /* generale*/
 body {
     min-width: 350px;
@@ -9,6 +10,16 @@ a {
     cursor: pointer;
 }
 
+svg {
+    width:30px;
+    height:20px;
+    fill:orange;
+    stroke:black;
+    stroke-width:0;
+    overflow: visible;
+    cursor: pointer;
+}
+
 /* Inizio header*/
 #logo-img {
     height: 24px;
@@ -16,13 +27,13 @@ a {
 }
 
 #logo-box {
-    display: inline-block;
+    display: flex;
     position: relative;
     top: 25px;
     left: 45px;
 }
 
-header {
+.header {
     position: sticky;
     top: 0;
     background-color: #F8BE30;
@@ -34,35 +45,58 @@ header {
     z-index: 5;
 }
 
-.header.scrolled {
-    background-color: #fff !important;
-    transition: background-color 200ms linear;
-}
+.header.scrolled{ background:white;}
 
-.header a {
+header a {
     padding: 0 10px;
     font-weight: 400;
     font-family: Arial, Helvetica, sans-serif;
+    color:black;
 }
 
 #nav-top {
-    display: inline-block;
-    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     position: relative;
-    top: 25px;
     right: 8%;
+    white-space: nowrap;
+}
+
+.list{
+    position: relative;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    bottom: 5px;
+    right: 15px;
 }
 
 #button-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 20px;
     background-color: black;
     color: white;
-    width: 104px;
-    height: 38px;
-    padding: 7px 16px 9px;
-    line-height: 30px;
+    width: 90px;
+    height: 34px;
 }
 
+@media screen and (max-width: 750px){
+    .list{
+        opacity: 0;
+        /* in fase di chiarimento
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        overflow: hidden;
+        */
+    }
+
+}
 /* Fine Header*/
 
 /* Inizio sezione Banner "Stay Curious."*/
@@ -70,60 +104,78 @@ header {
     background-color: #F8BE30;
     border-bottom: 1px solid;
     min-height: 455px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#m-style{
+   
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -o-transform:rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+    margin-left: 20%;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #main-banner h2 {
     font-size: 106px;
     margin: 0;
     /*  */
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-}
+    font-family: 'Unbounded', cursive;
+    font-weight: 400;
+   }
 
 #main-banner h3 {
     font-size: 24px;
     font-weight: 500;
+    padding: 0 12%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#main-banner:first-child div {
+#stay-curious {
     position: relative;
     top: 70px;
-    left: 70px;
 }
 
 #button-banner {
-    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 20%;
+    border-radius: 60px;
     background-color: black;
     color: white;
-    width: 213px;
+    width: 200px;
     height: 42px;
-    padding: 7px 16px 9px;
-    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 /* Fine sezione Banner "Stay Curious."*/
 
 /* Inizio sezione articoli flex da 6*/
+
+.svg-star{
+    position: relative;
+    top: 6px;
+}
+
 #trending-articles {
     border-bottom: 1px solid;
     margin-bottom: 50px;
 }
 
-#trending-articles-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.trending-article-card {
-    padding: 0 7%;
-    margin-bottom: 28px;
-}
-
 #trending-articles h3 {
+    margin-left: 20%;
     font-size: 12px;
     padding: 0 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .trending-article-card-number {
@@ -131,8 +183,22 @@ header {
     font-size: 30px;
     margin-right: 16px;
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgba(230, 230, 230, 1);
+    color:#75757557;
+    font-family: 'Prosto One', cursive;
+}
+
+#trending-articles-cards {
+    margin: 0 18%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trending-article-card {
+    padding: 0 7%;
+    margin-bottom: 28px;
 }
 
 .div-article-logo {
@@ -152,26 +218,37 @@ header {
 
 .card-datas h4 {
     display: inline;
+    position: relative;
+    bottom: 5px;
+    font-size: 14px;
     font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card-datas h2 {
     font-size: 16px;
     font-weight: 700;
-}
-
-.card-datas p {
-    overflow: hidden;
-
-    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px 0;
 }
 
 .card-datas span {
     padding-right: 7px;
     white-space: nowrap;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#757575;
 }
 
 /* Fine sezione articoli flex da 6*/
+
+/* Container ultima sezione*/
+article {
+    margin: 0 25%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 7%;
+}
 
 /* Inizio sezione articoli colonna sinistra*/
 #column-articles {
@@ -202,28 +279,64 @@ header {
 
 .column-article-img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     overflow: hidden;
 
 }
 
-.infos {
+.column-card-datas {
+    display: inline-block;
+    font-size: 13px;
+}
+
+.column-card-datas img {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+
+}
+
+.column-card-datas h4 {
+    position: relative;
+    bottom: 5px;
+    display: inline;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.column-card-datas h2 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px 0;
+}
+
+.column-card-datas span {
+    padding-right: 7px;
+    white-space: nowrap;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#757575;
+
+}
+
+.column-card-datas p {
+    overflow: hidden;
+    font-weight: 400;
+    color: #757575;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.card-article-infos {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 5px;
 }
 
-article {
-    margin: 0 5%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 5%;
-}
-
 .bookmark {
-    margin-left: 40%;
+    float: right;
+    padding-left: 40%;
 }
 
 /* Fine sezione articoli colonna sinistra*/
@@ -231,47 +344,59 @@ article {
 
 /* Inizio colonna sticky parte destra*/
 aside {
-    /* Safari */
-    position: -webkit-sticky;
     width: 50%;
 }
 
-.side-section {
+.side-section{
+    position: -webkit-sticky;
     position: sticky;
-    top: 74px;
+    top: 100px;
 }
 
 #discover-buttons {
-    /*position: sticky;
-    top: 143px;*/
+    margin: 0 0%;
+    background-color: white;
     border-bottom: 1px solid;
-    border-color: (230, 230, 230, 1);
+    border-color: #7575758e;
     padding-bottom: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
+    font-size: 13px;
+    z-index: 3;
 }
 
 #discover-buttons div {
+    margin: 0 10%;
     display: inline-block;
     margin: 0 8px 8px 0;
     padding: 6px 16px;
     border: 1px solid;
-    border-color: (230, 230, 230, 1);
+    border-color: #757575a6
+}
+
+#discover-buttons div:hover{
+    background-color: rgba(128, 128, 128, 0.212);
 }
 
 #discover-buttons h4 {
     font-size: 14px;
 }
 
+#discover-buttons a {
+    color: #757575;
+}
+
 footer {
-    /*position: sticky;
-    top: 320px;*/
+    margin: 0 10%;
     padding: 25px 0;
+    overflow: hidden;
+
 }
 
 footer a {
-    font-size: 14px;
-    padding: 15px;
+   font-size: 14px;
+    padding: 15px; 
+    color: #757575;
 }
 
 /* Fine colonna sticky parte destra*/
