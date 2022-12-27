@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medium - Where good ideas find you.</title>
+    <!-- IMPORTAZIONE FOGLIO DI STILE-->
     <link rel="stylesheet" href="style.css">
+    <!--ICONA IN MINIATURA SULLA FINESTRA-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <!--IMPORTAZIONE ICONE ONLINE-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
-
 <body>
+    <!-- HEADER-->
     <header class="header">
         <div id="logo-box">
             <img id="logo-img" src="assets/logo1.png">
@@ -27,6 +30,7 @@
         </nav>
     </header>
     <main>
+        <!--SEZIONE BANNER STAY CURIOUS-->
         <section id="main-banner">
             <div id="stay-curious">
                 <h2>Stay curious.</h2>
@@ -34,6 +38,7 @@
                     from writers on any topic.</h3>
                 <a id="button-banner" href="">Start reading</a>
             </div>
+            <!-- DISEGNO M-->
             <div id="m-style">
                 <p>
                     M M M M M M M M M M M M M M <br>
@@ -55,6 +60,7 @@
                 </p>
             </div>
         </section>
+        <!-- SEZIONE FLEX DA 6 CARD-->
         <section id="trending-articles">
             <h3><ion-icon name="trending-up-outline"></ion-icon>   TRENDING ON MEDIUM</h3>
             <div id="trending-articles-cards">
@@ -77,7 +83,7 @@
                         </svg>
                     </div>
                 </div>
-
+                <!--FINE DI UNA CARD-->
                 <div class="trending-article-card">
                     <div class="trending-article-card-number">
                         <span>02</span>
@@ -211,6 +217,7 @@
                         <img src="assets/column-article-img.png" alt="immagine-articolo">
                     </div>
                 </div>
+                <!--FINE DI UNA CARD DELLE CARD IN COLONNA-->
 
                 <div class="column-article-card">
                     <div class="column-card-datas">
@@ -524,10 +531,8 @@
                         <img src="assets/column-article-img.png" alt="immagine-articolo">
                     </div>
                 </div>
-
-
-
             </section>
+            <!-- SEZIONE STICKY IN BASSO A DESTRA-->
             <aside>
                 <div class="side-section">
                     <section id="discover-buttons">
@@ -581,17 +586,17 @@
         </article>
     </main>
 </body>
-<script>
-    var navbar = document.querySelector('.header')
-
-window.onscroll = function() {
- /* console.debug(document.body.scrollTop)*/
-// pageYOffset or scrollY
-if (window.pageYOffset > 550) {
-  navbar.classList.add('scrolled')
-} else {
-  navbar.classList.remove('scrolled')
-}
-}
+    <!-- sCRIPT PER CAMBIO COLORE HEADER ALLO SCROLL-->
+    <script>
+        var navbar = document.querySelector('.header')
+        window.onscroll = function() {
+        //console.debug(document.body.scrollTop)
+        // pageYOffset or scrollY
+            if (window.pageYOffset > 550) {
+                navbar.classList.add('scrolled')
+            } else {
+                navbar.classList.remove('scrolled')
+            }
+    }       
   </script>
 </html>

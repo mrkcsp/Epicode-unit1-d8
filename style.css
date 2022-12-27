@@ -109,7 +109,6 @@ header a {
 }
 
 #m-style{
-   
     -webkit-transform:rotateY(180deg);
     -moz-transform:rotateY(180deg);
     -o-transform:rotateY(180deg);
@@ -128,7 +127,7 @@ header a {
     /*  */
     font-family: 'Unbounded', cursive;
     font-weight: 400;
-   }
+}
 
 #main-banner h3 {
     font-size: 24px;
@@ -154,7 +153,6 @@ header a {
     width: 200px;
     height: 42px;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 
 /* Fine sezione Banner "Stay Curious."*/
@@ -213,7 +211,6 @@ header a {
 .card-datas img {
     width: 20px;
     height: 20px;
-
 }
 
 .card-datas h4 {
@@ -293,7 +290,6 @@ article {
     border-radius: 50%;
     width: 20px;
     height: 20px;
-
 }
 
 .column-card-datas h4 {
@@ -390,7 +386,6 @@ footer {
     margin: 0 10%;
     padding: 25px 0;
     overflow: hidden;
-
 }
 
 footer a {
