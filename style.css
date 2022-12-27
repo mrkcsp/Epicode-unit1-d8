@@ -1,0 +1,277 @@
+/* generale*/
+body {
+    min-width: 350px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Inizio header*/
+#logo-img {
+    height: 24px;
+    width: 160px;
+}
+
+#logo-box {
+    display: inline-block;
+    position: relative;
+    top: 25px;
+    left: 45px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #F8BE30;
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid;
+    font-size: 14px;
+    transition: all .5s ease-in-out;
+    z-index: 5;
+}
+
+.header.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+}
+
+.header a {
+    padding: 0 10px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav-top {
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 25px;
+    right: 8%;
+}
+
+#button-nav {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    width: 104px;
+    height: 38px;
+    padding: 7px 16px 9px;
+    line-height: 30px;
+}
+
+/* Fine Header*/
+
+/* Inizio sezione Banner "Stay Curious."*/
+#main-banner {
+    background-color: #F8BE30;
+    border-bottom: 1px solid;
+    min-height: 455px;
+}
+
+#main-banner h2 {
+    font-size: 106px;
+    margin: 0;
+    /*  */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+#main-banner h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#main-banner:first-child div {
+    position: relative;
+    top: 70px;
+    left: 70px;
+}
+
+#button-banner {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    width: 213px;
+    height: 42px;
+    padding: 7px 16px 9px;
+    line-height: 20px;
+}
+
+/* Fine sezione Banner "Stay Curious."*/
+
+/* Inizio sezione articoli flex da 6*/
+#trending-articles {
+    border-bottom: 1px solid;
+    margin-bottom: 50px;
+}
+
+#trending-articles-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trending-article-card {
+    padding: 0 7%;
+    margin-bottom: 28px;
+}
+
+#trending-articles h3 {
+    font-size: 12px;
+    padding: 0 100px;
+}
+
+.trending-article-card-number {
+    float: left;
+    font-size: 30px;
+    margin-right: 16px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(230, 230, 230, 1);
+}
+
+.div-article-logo {
+    display: inline-block;
+}
+
+.card-datas {
+    display: inline-block;
+    font-size: 13px;
+}
+
+.card-datas img {
+    width: 20px;
+    height: 20px;
+
+}
+
+.card-datas h4 {
+    display: inline;
+    font-weight: 500;
+}
+
+.card-datas h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card-datas p {
+    overflow: hidden;
+
+    font-weight: 400;
+}
+
+.card-datas span {
+    padding-right: 7px;
+    white-space: nowrap;
+}
+
+/* Fine sezione articoli flex da 6*/
+
+/* Inizio sezione articoli colonna sinistra*/
+#column-articles {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.card-category {
+    display: inline;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    color: #757575;
+    width: 86px;
+    height: 24px;
+    padding: 4px 10px 6px;
+    line-height: 0;
+}
+
+.column-article-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.column-article-img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.infos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+article {
+    margin: 0 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.bookmark {
+    margin-left: 40%;
+}
+
+/* Fine sezione articoli colonna sinistra*/
+
+
+/* Inizio colonna sticky parte destra*/
+aside {
+    /* Safari */
+    position: -webkit-sticky;
+    width: 50%;
+}
+
+.side-section {
+    position: sticky;
+    top: 74px;
+}
+
+#discover-buttons {
+    /*position: sticky;
+    top: 143px;*/
+    border-bottom: 1px solid;
+    border-color: (230, 230, 230, 1);
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+#discover-buttons div {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 6px 16px;
+    border: 1px solid;
+    border-color: (230, 230, 230, 1);
+}
+
+#discover-buttons h4 {
+    font-size: 14px;
+}
+
+footer {
+    /*position: sticky;
+    top: 320px;*/
+    padding: 25px 0;
+}
+
+footer a {
+    font-size: 14px;
+    padding: 15px;
+}
+
+/* Fine colonna sticky parte destra*/
